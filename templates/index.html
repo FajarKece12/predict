@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediksi Club Lolos UCL</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Prediksi Club Lolos UCL</h1>
+        <form action="/predict/" method="POST">
+            <div class="form-group">
+                <label for="club_name">Nama Klub:</label>
+                <input type="text" name="club_name" placeholder="Masukkan Nama Klub" required>
+            </div>
+
+            <div class="form-group">
+                <label for="pts_g">Points per Game:</label>
+                <input type="text" name="pts_g" placeholder="Rata-rata poin yang diperoleh per pertandingan" required>
+            </div>
+
+            <div class="form-group">
+                <label for="xg">Expected Goals:</label>
+                <input type="text" name="xg" placeholder="Perkiraan gol" required>
+            </div>
+
+            <div class="form-group">
+                <label for="xga">Expected Goals Against:</label>
+                <input type="text" name="xga" placeholder="Perkiraan gol yang diharapkan kebobolan" required>
+            </div>
+
+            <div class="form-group">
+                <label for="xgd">Expected Goal Difference:</label>
+                <input type="text" name="xgd" placeholder="Selisih antara xG dan xGA" required>
+            </div>
+
+            <div class="form-group">
+                <label for="xgd_90">xGD/90:</label>
+                <input type="text" name="xgd_90" placeholder="Rata-rata selisih expected goals per pertandingan" required>
+            </div>
+
+            <div class="form-group">
+                <label for="w">WIN:</label>
+                <input type="text" name="w" placeholder="Jumlah kemenangan" required>
+            </div>
+
+            <button type="submit" class="submit-btn">Prediksi</button>
+        </form>
+    </div>
+</body>
+</html>

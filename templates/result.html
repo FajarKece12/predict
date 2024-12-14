@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Prediksi UCL</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="result-container">
+        <h1>Hasil Prediksi UCL</h1>
+        <h2>Club: {{ club_name }}</h2>
+        <div class="model-result">
+            <h3>Random Forest Model</h3>
+            <div class="status">
+                <p>{{ rf_status }}</p>
+            </div>
+        </div>
+
+        <div class="model-result">
+            <h3>C4.5 Model</h3>
+            <div class="status">
+                <p>{{ c45_status }}</p>
+            </div>
+        </div>
+
+        <div class="model-result">
+            <h3>XGBoost Model</h3>
+            <div class="status">
+                <p>{{ xgb_status }}</p>
+            </div>
+        </div>
+
+        <div class="back-btn">
+            <a href="/">Kembali</a>
+        </div>
+    </div>
+</body>
+</html>
